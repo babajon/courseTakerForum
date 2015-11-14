@@ -1,0 +1,67 @@
+{
+
+    "message":[
+        {   
+            "messageID":123,
+            "messageType":"parent",
+            "messageSenderID":1,
+            "messageSenderUserName":"Admin",
+            "threadID":123,
+            "messageText":"Is this how I use DHIS2?",
+            "replies":[ 
+                {
+                    "messageID":124
+                },
+                {
+                    "messageID":125
+                },
+                {
+                    "messageID":126
+                }
+                            
+            ]
+        },
+        {
+            "messageID":124,
+            "messageType":"child",
+            "messageSenderID":2,
+            "messageSenderUserName":"Pedro",
+            "threadID":123,
+            "messageText":"That's not how you use DHIS2 N00b",
+            "replies":[
+                {
+                   
+                }
+            ]
+        },
+        {
+            "messageID":125,
+            "messageType":"child",
+            "messageSenderID":3,
+            "messageSenderUserName":"Farrukh",
+            "threadID":123,
+            "messageText":"DHIS is the best software that I have ever seen in my life",
+            "replies":[
+                {
+                   
+                }
+            ]
+        },
+         {
+            "messageID":126,
+            "messageType":"child",
+            "messageSenderID":3,
+            "messageSenderUserName":"Farrukh",
+            "threadID":123,
+            "messageText":"Nevermind",
+            "replies":[
+                {
+                   
+                }
+            ]
+        }
+        
+    ]
+}
+    
+       

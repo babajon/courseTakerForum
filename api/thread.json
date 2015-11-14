@@ -1,0 +1,18 @@
+{
+	"thread":	
+		{	
+			"threadTitle":"Test thread",
+			"threadID":123,
+			"courseID":12312,
+			"messages":[
+                {
+                    "messageID":123,
+					"messageID":124,
+					"messageID":125
+                }
+            ]
+		}
+
+
+
+}
