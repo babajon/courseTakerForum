@@ -59,8 +59,33 @@
                    
                 }
             ]
-        }
-        
+        },
+         {
+            "messageID":127,
+            "messageType":"parent",
+            "messageSenderID":3,
+            "messageSenderUserName":"Mr Confused",
+            "threadID":123,
+            "messageText":"How do I log into DHIS Demo?",
+            "replies":[
+                {
+                   "messageID":128
+                }
+            ]
+        },
+         {
+            "messageID":128,
+            "messageType":"child",
+            "messageSenderID":3,
+            "messageSenderUserName":"Farrukh",
+            "threadID":123,
+            "messageText":"You can try to do it with username: admin, password: district",
+            "replies":[
+                {
+                   
+                }
+            ]
+        }       
     ]
 }
     

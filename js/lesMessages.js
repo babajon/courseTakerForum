@@ -39,6 +39,8 @@ function visMessages(data){
 			messageContent += '<hr>';
 			//add message replies to forum
 			$('#messageDiv').append(messageContent);
+			
+			//go through replies and post them
 			for(i = 0; i<data['message'][key]['replies'].length; i++){
 				//console.log(data['message'][key]['replies'][i].messageID)
 				for(keyss in data['message']){
@@ -68,5 +70,26 @@ function visMessages(data){
 				}		
 			}						
 		}				
+	}
+}
+function getThreads(){
+	 $.ajax({
+		url: '/api/thread.json',
+		dataType: 'json'
+	}).success(function(threads) {
+		console.log(threads);
+		fillThreads(threads);
+	}).error(function(error) {
+		console.log("error fetching json file");
+	});
+}
+function fillThreads(data){
+	for(key in data['thread']){
+		var threadContent = '<div class="panel panel-default style="margin-left: 15px; margin-right: 15px" id="chatbox">';
+		threadContent += ' <div class="panel-body">';
+		threadContent += data['thread'][key].threadTitle;
+		threadContent += '</div>';
+		threadContent += '</div>';
+		$('#threadDiv').append(threadContent);
 	}
 }

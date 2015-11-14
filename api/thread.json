@@ -1,18 +1,24 @@
 {
-	"thread":	
+	"thread":[	
 		{	
 			"threadTitle":"Test thread",
 			"threadID":123,
-			"courseID":12312,
-			"messages":[
-                {
-                    "messageID":123,
-					"messageID":124,
-					"messageID":125
-                }
-            ]
+			"courseID":12312
+		},
+		{	
+			"threadTitle":"Basic course thread",
+			"threadID":124,
+			"courseID":12312
+		},
+		{	
+			"threadTitle":"Swag thread",
+			"threadID":125,
+			"courseID":12312
+		},
+		{	
+			"threadTitle":"Intermediate thread",
+			"threadID":126,
+			"courseID":12312
 		}
-
-
-
+	]
 }
