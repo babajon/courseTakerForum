@@ -16,7 +16,8 @@ function visMessages(data,threadID){
 		//console.log(data['message'][key].replies.length);
 		
 		
-		//add messages to forum thread
+		//add messages to forum thread, should check if message belongs to this thread. 
+		//But not for now, becasue of limited messages are made
 		if(data['message'][key].messageType == 'parent'){
 			console.log(data['message'][key].messageText);
 			var messageContent = '<div class="panel panel-default" style="margin-left: 15px; margin-right: 15px" id="chatbox">';
