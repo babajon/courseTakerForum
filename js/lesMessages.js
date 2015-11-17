@@ -50,6 +50,7 @@ function visMessages(data,threadID){
 						var messageReply = '<div class="panel panel-default" style="margin-left: 50px; margin-right: 15px" id="chatbox">';
 						messageReply += '<div class="panel-heading">';
 						messageReply += '<h3 class="panel-title">';
+						messageReply += '<h5 class="pull-right"> Reply to: ' + data['message'][key].messageSenderUserName + '</h5>';
 						messageReply += data['message'][keyss].messageSenderUserName;
 						messageReply += '</h3>';
 						messageReply += '</div>';
