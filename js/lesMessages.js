@@ -1,18 +1,18 @@
-function lesMessages(){
+function lesMessages(threadID){
    $.ajax({
 		url: '/api/message.json',
 		dataType: 'json'
 	}).success(function(messages) {
 		console.log(messages);
-		visMessages(messages);
+		visMessages(messages,threadID);
 	}).error(function(error) {
 		console.log("error fetching json file");
 	});
 }
-function visMessages(data){
+function visMessages(data,threadID){
 	
 	for(key in data['message']){
-		
+		console.log(data['message'][key].threadID)
 		//console.log(data['message'][key].replies.length);
 		
 		
@@ -87,9 +87,28 @@ function fillThreads(data){
 	for(key in data['thread']){
 		var threadContent = '<div class="panel panel-default style="margin-left: 15px; margin-right: 15px" id="chatbox">';
 		threadContent += ' <div class="panel-body">';
-		threadContent += data['thread'][key].threadTitle;
+		
+		threadContent += data['thread'][key].threadTitle;	
+		threadContent +='<a href="/pages/thread.html?' + 'thread_id='+ data['thread'][key].threadID +'"'; 
+		threadContent += 'class="btn btn-info pull-right" role="button">Go to discussion</a>';
+		
 		threadContent += '</div>';
 		threadContent += '</div>';
+		
 		$('#threadDiv').append(threadContent);
+	}
+}
+function getURLParameter(url, parameter_key)
+{
+	var url_query_string = url.search.substring(1);
+	var url_variables = url_query_string.split('&');
+
+	for (var i = 0; i < url_variables.length; i++)
+	{
+		var pair = url_variables[i].split('=');
+		if (pair[0] == parameter_key)
+		{
+			return pair[1];
+		}
 	}
 }
